@@ -34,13 +34,12 @@ To implement a Support Vector Machine (SVM) model to classify food items and opt
 
 7. **Evaluate Model**  
    Assess the model’s accuracy and effectiveness on the testing set using performance metrics.
+8. **Visualize Results**
+   Plot the confusion matrix as a heatmap to assess prediction performance.
 
 ## Program:
 ```
-/*
-Program to implement SVM for food classification for diabetic patients.
-*/
-
+# Program to implement SVM for food classification for diabetic patients. 
 # Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -89,9 +88,9 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 print("Classification Report:\n", classification_report(y_test, y_pred))
 
-# Confusion Matrix with Modified Color Gradient
+# Confusion Matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
-sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="coolwarm", 
+sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues", 
             xticklabels=['Not Suitable', 'Suitable'], yticklabels=['Not Suitable', 'Suitable'])
 plt.xlabel("Predicted")
 plt.ylabel("Actual")
@@ -101,9 +100,7 @@ plt.show()
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/259f18f7-c1ba-47e1-86ac-ce3e77a55666)
-
-![image](https://github.com/user-attachments/assets/6e7599cf-0785-4a30-bc91-bd9e6ff14462)
+<img width="671" alt="Screenshot 2024-11-14 at 11 25 42 AM" src="https://github.com/user-attachments/assets/ad30a609-549a-4500-b8d2-d5c9c4c06b16">
 
 
 ## Result:
